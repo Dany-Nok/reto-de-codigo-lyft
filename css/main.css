@@ -1,59 +1,62 @@
 /*
- * Estilos de tu proyecto
+ * Estilos utilizados:
 font-family: 'Montserrat', sans-serif;
 
-.icon-facebook:before {
-  content: "\ea90";
-}
-
-.icon-instagram:before {
-  content: "\ea92";
-}
-
-.icon-twitter:before {
-  content: "\ea96";
-}
-COLORES A USAR:
+COLORES:
 -Botones, hover: #FF00BF
 -Fondo de footer: #333447
 -Título del formulario: #352384
 -Texto del formulario: #728099
--Gradiente morado: linear-gradient(#76278F, #2B1E66);
-
- */
+-Gradiente morado: linear-gradient(#76278F, #2B1E66);*/
 body{
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
-header{
+header{ /*MENÚ SUPERIOR (CON IMAGEN QUE VA DE FONDO)*/
   background-image: url(../assets/images/hero.gif);
   background-size: cover;
+}
+.gradient_section{ /*GRADIENTE PARA QUE "SUAVICE" ENTRE IMG DE FONDO Y GRADIENTE DE LA PRIMERA SECCIÓN*/
+  position: absolute;
+  background: linear-gradient(transparent, #76278f);
   width: 100%;
-  height: auto;
-  position: relative;
-  /*margin: 0;
-  padding: 0;*/
+  height: 180px;
+  top: 410px;
 }
-.logo{
-  border: 1px solid red;
+header .top_menu{
+  display: inline-block;
   position: relative;
-  margin: 20px 70px;
-  width: 60px;
-  height: auto;
-  padding: 5px;
+  float: left;
+  clear: both;
 }
-.header_menu li{
+.logo{ /*LOGO LYFT - ESQUINA SUPERIOR IZQUIERDA PÁGINA*/
+  position: relative;
+  margin: 15px 65px;
+  width: 65px;
+  height: auto;
+  padding: 20px;
+}
+.top_menu ul li{ /*MENÚ SUPERIOR PÁGINA (DRIVE, EXPLORE, HELP Y BOTÓN LOG IN)*/
+  display: inline-block;
+  position: relative;
   list-style: none;
   color: white;
-  width: 300px;
-  font-size: 20px;
-  text-align: right;
-  /*padding-left: 50px;
-  margin-right: 10px;*/
+  font-size: 18px;
+  margin-left: 50px;
+  bottom: 100px;
+  left: 730px;
 }
-li .login_button{
-  font-size: 20px;
+button{ /*CARACTERÍSTICAS EN COMÚN PARA BOTONES DE LA PÁGINA*/
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: inline-block;
+  border-radius: 7px;
+  color: white;
+  padding: 10px 20px;
+}
+li .login_button{ /*BOTÓN LOG IN*/
+  font-size: 18px;
   color: white;
   border: 1px solid white;
   border-style: solid;
@@ -61,63 +64,211 @@ li .login_button{
   background-color: transparent;
   padding: 10px 15px;
 }
-.white_box{
+.white_box{ /*CAJA LATERAL "TURN MILES INTO MONEY", QUE CONTIENE FORMULARIO DE LLENADO*/
   background-color: white;
   position: relative;
   display: inline-block;
-  left: 538px;
-  padding-left: 40px;
+  left: 315px;
+  top: 120px;
+  padding: 50px 40px;
+  padding-right: 100px;
+  margin-bottom: 150px;
 }
-h1{
+h1{ /*TÍTULO CAJA LATERAL*/
+  margin: 0;
   font-size: 40px;
   text-align: left;
-  line-height: 10px;
+  line-height: 40px;
+  color: #352384;
 }
-.post_header{
-  background: linear-gradient(#76278F, #2B1E66);
-  color: white;
-  position: relative;
-  display: inline-block;
-}
-.smartphone{
-  display: inline-block;
-  position: relative;
-  width: 500px;
-  height: auto;
-  padding-left: 700px;
-  bottom: 300px;
-}
-h2 .post_header {
-  position: relative;
-  font-size: 30px;
+.white_box h3{ /*SUBTÍTULO CAJA LATERAL*/
+  font-size: 15px;
   text-align: left;
-  padding-top: 80px;
-  line-height: 10px;
-  padding-left: 100px;
-}
-h2 .h2_2{
-  font-size: 30px;
-  text-align: left;
-  padding-top: 0;
   line-height: 0;
-  padding-left: 100px;
+  color: #352384;
 }
-p{
-  position: relative;
+input{ /*FORMULARIO DE LLENADO PARA "PHONE NUMBER"*/
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #352384;
+  width: 400px;
+  font-size: 15px;
+  color: #728099;
   text-align: left;
-  padding-top: 10px;
-  padding-left: 100px;
-  padding-right: 210px;
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+.driver, .driver a{ /*BOTÓN "BECOME A DRIVER"*/
+  position: relative;
+  display: inline-block;
+  border-style: none;
+  border-radius: 8px;
+  background-color: #FF00BF;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+}
+.white_box p a{ /*LINK "SIGN UP TO RIDE"*/
+  position: relative;
+  color: #728099;
+  margin-left: 200px;
+  bottom: 50px;
+}
+.white_box h6{ /*TEXTO "NOTA AL PIE" DE WHITE BOX*/
+  margin: 0;
+  line-height: 20px;
+  color: #728099;
+}
+.post_header{ /* PRIMERA SECCIÓN DESPUÉS DE MENÚ DE NAVEGACIÓN, QUE CONTIENE TEXTOS Y FOTO DE SMARTPHONE*/
+  background: linear-gradient(#76278F, #2B1E66);
+  display: inline-block;
+  width: 100%;
+  height: 650px;
+}
+.post_header h2{ /*TÍTULOS PRIMERA SECCIÓN*/
+  position: relative;
+  color: white;
+  font-size: 28px;
+  text-align: left;
+  padding-top: 50px;
+  padding-left: 150px;
+}
+.post_header p{ /*TEXTOS PRIMERA SECCIÓN*/
+  position: relative;
+  color: white;
+  text-align: left;
+  padding-left: 150px;
+}
+.smartphone{ /*IMAGEN SMARTPHONE*/
+  display: block;
+  position: relative;
+  width: 470px;
+  height: auto;
+  padding-left: 750px;
+  bottom: 435px;
+}
+.container_section_1, .container_section_3, .frame_video_1, .frame_video_3{ /*SECCIONES CON VIDEO A LA DERECHA*/
+  margin: 0;                                                                /* Y TEXTO A LA IZQUIERDA*/
+  display: inline-block;
+  float: right;
+  clear: both;
+}
+.container_section_2, .frame_video_2{ /*SECCIÓN CON VIDEOS A LA IZQUIERDA Y TEXTO A LA DERECHA*/
+  margin: 0;
+  display: inline-block;
+  float: left;
+  clear: both;
+}
+.only_text_1, .only_text_2, .only_text_3{ /*BLOQUES DE TEXTO DE SECCIONES CON VIDEO*/
+  background-color: white;
+  display: inline-block;
+  text-align: left;
+  padding: 0 50px;
+  margin-top: 20px;
+}
+.only_text_1 h2, .only_text_2 h2, .only_text_3 h2{ /*TÍTULOS SECCIONES CON VIDEO*/
+  line-height: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+.only_text_1 h5, .only_text_2 h5, .only_text_3 h5{ /*PRE-TÍTULOS ("WATCH") SECCIONES CON VIDEO*/
+  line-height: 0;
+}
+.only_text_1 p, .only_text_2 p, .only_text_3 p{ /*TEXTO SECCIONES CON VIDEO*/
   line-height: 25px;
 }
-/*iframe{
-  width: 600px;
-  height: auto;
+iframe{ /*VIDEOS*/
+  margin: 0;
   position: relative;
-  text-align: right;*/
+  width: 907px;
+  height: 505px;
 }
-footer{
-  display: inline-block;
-  position: absolute;
+footer{ /*PIE DE PÁGINA*/
+  display: block;
   background-color: #333447;
+  float: left;
+  clear: both;
+}
+footer ul{
+  display: inline-block;
+  width: 150px;
+  margin-left: 100px;
+  text-align: left;
+  line-height: 40px;
+}
+footer ul li{
+  list-style: none;
+  color: white;
+  font-weight: lighter;
+}
+footer .column_4{ /*CONTIENE BOTONES DE APP STORE, GOOGLE PLAY Y MICROSOFT*/
+  margin: 0;
+  margin-left: 50px;
+  padding: 30px 30px 0;
+}
+footer h3{ /*TÍTULOS DE FOOTER: LOG IN, PARTNER Y LEARN*/
+  font-size: 18px;
+  font-weight: bold;
+}
+li a{ /*LINKS DE FOOTER*/
+  text-decoration: none;
+  color: white;
+}
+li a:hover{ /*LINKS DE FOOTER (CUANDO SE COLOCA PUNTERO ENCIMA)*/
+  color: #FF00BF;
+  text-decoration: underline;
+}
+.icon_apple{
+  padding-top: 25px;
+}
+.icon_google{
+  width: 88%;
+  height: auto;
+  padding-top: 25px;
+}
+.icon_microsoft{
+  width: 88%;
+  height: auto;
+  padding-top: 25px;
+}
+.social_media_icons{ /*ICONOS REDES SOCIALES (SIN DECORACIÓN)*/
+  display: inline-block;
+  color: white;
+  padding-left: 520px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+.icon-facebook:before{
+  content: "\ea90";
+}
+.icon-instagram:before{
+  content: "\ea92";
+}
+.icon-twitter:before{
+  content: "\ea96";
+}
+.icon-facebook, .icon-instagram, .icon-twitter{ /*"DECORACIÓN" ICONOS REDES SOCIALES*/
+  position: relative;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 50px;
+  padding: 8px;
+  text-align: center;
+}
+.division_line{ /*LINEA DIVISORIA BLANCA*/
+  border: 1px solid white;
+  width: 650px;
+  margin-left: 360px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+footer p{ /*TEXTO COPYRIGHT*/
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
 }
